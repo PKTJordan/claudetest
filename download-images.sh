@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-BASE="https://images.squarespace-cdn.com/content/v1/674e2bbdce5c605f65fa41b9"
+BASE="https://web.archive.org/web/20250307175529im_/https://images.squarespace-cdn.com/content/v1/674e2bbdce5c605f65fa41b9"
 DEST="images"
 mkdir -p "$DEST"
 
