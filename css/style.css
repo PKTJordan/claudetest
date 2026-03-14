@@ -95,6 +95,15 @@ nav {
   margin-top: 2px;
 }
 
+/* Logo image (real PNG) */
+.logo-img {
+  height: 72px;
+  width: auto;
+  display: block;
+  /* Squarespace logo is dark; invert to white for dark hero background */
+  filter: brightness(0) invert(1);
+}
+
 /* Nav Link */
 .nav-contact {
   font-family: 'Raleway', sans-serif;
@@ -115,6 +124,7 @@ nav {
   height: 480px;
   background-color: #1a2a4a;
   background-image: url('../images/hero-bg.jpg');
+  /* Fallback if image not yet downloaded – gradient approximates the dark ballroom photo */
   background-size: cover;
   background-position: center 40%;
   display: flex;
@@ -361,6 +371,14 @@ nav {
   filter: none;
 }
 
+.logo-text-fallback {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  line-height: 1.5;
+}
+
 /* ================================================
    FOOTER
    ================================================ */
@@ -394,6 +412,21 @@ footer {
 
 .footer-brand a {
   color: var(--coral);
+}
+
+/* Logo text fallback (when img fails) */
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--navy);
+}
+
+/* Footer logo image */
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 /* Footer logo (dark version) */

@@ -15,14 +15,19 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav aria-label="Main navigation">
     <a href="#" class="logo" aria-label="Halle Mary Events – Home">
-      <div class="logo-text">
+      <!-- Use the real logo image; SVG fallback if it fails to load -->
+      <img
+        src="images/logo-main.png"
+        alt="Halle Mary Events"
+        class="logo-img"
+        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
+      />
+      <div id="logo-fallback" class="logo-text" style="display:none;">
         <span class="logo-name-top">Halle</span>
         <div class="logo-divider">
           <hr />
-          <!-- Cactus / desert-scene icon -->
           <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="1" y="1" width="38" height="38" rx="3" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/>
-            <!-- Saguaro cactus -->
             <line x1="20" y1="30" x2="20" y2="10" stroke="rgba(255,255,255,0.85)" stroke-width="2.2" stroke-linecap="round"/>
             <line x1="20" y1="18" x2="14" y2="18" stroke="rgba(255,255,255,0.85)" stroke-width="2.2" stroke-linecap="round"/>
             <line x1="14" y1="18" x2="14" y2="13" stroke="rgba(255,255,255,0.85)" stroke-width="2.2" stroke-linecap="round"/>
@@ -53,7 +58,7 @@
 
     <div class="services-grid">
 
-      <!-- Service 1 -->
+      <!-- Service 1: Raffle & Auction -->
       <div class="service-card">
         <img
           src="images/service-raffle.jpg"
@@ -67,7 +72,7 @@
         <p>We specialize in turning donations into show-stopping raffle baskets and auction packages that captivate your guests and maximize fundraising. From expertly bundling items for maximum appeal to offering guidance on high-demand ideas, we ensure every detail is thoughtfully curated.</p>
       </div>
 
-      <!-- Service 2 -->
+      <!-- Service 2: Fundraising Strategy -->
       <div class="service-card">
         <img
           src="images/service-fundraising.jpg"
@@ -81,7 +86,7 @@
         <p>A successful fundraiser is about more than just planning a great party—it's about creating an experience that inspires generosity and drives meaningful contributions. With over a decade of development experience, HME brings a deep understanding of donor psychology and fundraising best practices.</p>
       </div>
 
-      <!-- Service 3 -->
+      <!-- Service 3: Decor & Styling -->
       <div class="service-card">
         <img
           src="images/service-decor.jpg"
@@ -95,7 +100,7 @@
         <p>We bring your vision to life by transforming spaces into stunning experiences with thoughtfully curated decor and styling. From selecting perfect themes and color palettes to coordinating elegant linens and ensuring every design element aligns beautifully, we create a cohesive and unforgettable ambiance tailored to your vision.</p>
       </div>
 
-      <!-- Service 4 -->
+      <!-- Service 4: Audio/Visual -->
       <div class="service-card">
         <img
           src="images/service-av.jpg"
@@ -137,7 +142,7 @@
       </div>
     </div>
 
-    <!-- Photo row -->
+    <!-- Casual photo row -->
     <div class="about-photos">
       <div class="about-photo-item">
         <img
@@ -180,75 +185,43 @@
     <div class="logos-grid">
 
       <div class="logo-item">
-        <img
-          src="images/logo-habitat.png"
-          alt="Habitat for Humanity Central Arizona"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Habitat for Humanity<br>Central Arizona</p>';"
-        />
+        <img src="images/logo-habitat.jpg" alt="Habitat for Humanity Central Arizona" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Habitat for Humanity<br>Central Arizona</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-gabriels-angels.png"
-          alt="Gabriel's Angels – Pets Helping Kids"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Gabriel\'s Angels<br>Pets Helping Kids</p>';"
-        />
+        <img src="images/logo-gabriels-angels.jpg" alt="Gabriel&#39;s Angels – Pets Helping Kids" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Gabriel\'s Angels<br>Pets Helping Kids</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-arizona-humane.png"
-          alt="Arizona Humane Society"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Arizona Humane Society</p>';"
-        />
+        <img src="images/logo-arizona-humane.png" alt="Arizona Humane Society" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Arizona Humane Society</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-phoenix-rising.png"
-          alt="Phoenix Rising Charities FC"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Phoenix Rising<br>Charities FC</p>';"
-        />
+        <img src="images/logo-phoenix-rising.jpg" alt="Phoenix Rising Charities FC" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Phoenix Rising Charities FC</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-special-olympics.png"
-          alt="Special Olympics Arizona"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Special Olympics Arizona</p>';"
-        />
+        <img src="images/logo-special-olympics.png" alt="Special Olympics Arizona" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Special Olympics Arizona</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-tenet.png"
-          alt="Tenet Healthcare"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>TENET</p>';"
-        />
+        <img src="images/logo-tenet.jpg" alt="Tenet Healthcare" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>TENET</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-honorhealth.png"
-          alt="HonorHealth Foundation"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>HonorHealth Foundation</p>';"
-        />
+        <img src="images/logo-honorhealth.png" alt="HonorHealth Foundation" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>HonorHealth Foundation</p>';" />
       </div>
 
       <div class="logo-item">
-        <img
-          src="images/logo-ceces-hope.png"
-          alt="Cece's Hope"
-          loading="lazy"
-          onerror="this.outerHTML='<p style=\'font-family:Raleway,sans-serif;font-size:13px;color:#666;text-align:center;\'>Cece\'s Hope</p>';"
-        />
+        <img src="images/logo-ceces-hope.png" alt="Cece&#39;s Hope" loading="lazy"
+          onerror="this.outerHTML='<p class=\'logo-text-fallback\'>Cece\'s Hope</p>';" />
       </div>
 
     </div>
@@ -266,21 +239,29 @@
 
       <!-- Footer Logo -->
       <div class="footer-logo">
-        <span class="logo-name-top">Halle</span>
-        <div class="logo-divider">
-          <hr />
-          <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="1" y="1" width="38" height="38" rx="3" stroke="#d97a60" stroke-width="1.2"/>
-            <line x1="20" y1="30" x2="20" y2="10" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
-            <line x1="20" y1="18" x2="14" y2="18" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
-            <line x1="14" y1="18" x2="14" y2="13" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
-            <line x1="20" y1="16" x2="26" y2="16" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
-            <line x1="26" y1="16" x2="26" y2="11" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-          <hr />
+        <img
+          src="images/logo-main.png"
+          alt="Halle Mary Events"
+          class="footer-logo-img"
+          onerror="this.style.display='none'; document.getElementById('footer-logo-fallback').style.display='flex';"
+        />
+        <div id="footer-logo-fallback" class="footer-logo-text" style="display:none;">
+          <span class="logo-name-top">Halle</span>
+          <div class="logo-divider">
+            <hr />
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="1" width="38" height="38" rx="3" stroke="#d97a60" stroke-width="1.2"/>
+              <line x1="20" y1="30" x2="20" y2="10" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="20" y1="18" x2="14" y2="18" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="14" y1="18" x2="14" y2="13" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="20" y1="16" x2="26" y2="16" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="26" y1="16" x2="26" y2="11" stroke="#d97a60" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <hr />
+          </div>
+          <span class="logo-name-bottom">Mary</span>
+          <span class="logo-events">Events</span>
         </div>
-        <span class="logo-name-bottom">Mary</span>
-        <span class="logo-events">Events</span>
       </div>
 
       <!-- Location -->
