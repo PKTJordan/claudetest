@@ -330,6 +330,50 @@ nav {
 }
 
 /* ================================================
+   PHOTO GALLERY
+   ================================================ */
+.gallery {
+  background: var(--navy);
+  padding: 0;
+  overflow: hidden;
+}
+
+.gallery-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 12px;
+  animation: gallery-scroll 40s linear infinite;
+  width: max-content;
+}
+
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-track img {
+  height: 280px;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes gallery-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .gallery-track img {
+    height: 200px;
+  }
+}
+
+/* ================================================
    NONPROFIT EXPERIENCE
    ================================================ */
 .nonprofits {
